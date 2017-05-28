@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:visited{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+body {
+    background-color: #41467F;
+    font-family: 'Droid Sans', sans-serif;
+    color: aliceblue;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+div.nav {
+    padding: 20px 50px;
+    border: 10px groove #212340;
+    background-color: #212340;
+    position: fixed;
+    right:0;
+    left:0;
+    z-index: 1001;
+}
+    
+.navbutton {
+   cursor:pointer;
+   padding: 20px 50px;
+   display: inline;
+   font-family: 'Amatic SC', cursive;
+   font-size: 24px;
+   letter-spacing: 0.04em;
+   font-weight: 600;     
+}
+
+
+#projects-list{
+    background-color: #212340;
+    padding: 10px 50px;
+    border: 10px groove #212340;
+    display: block;
+    position: fixed;
+    top: 10%;
+    left:39%;
+    font-family: 'Amatic SC', cursive;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    z-index: 1001;
+}
+
+
+
+.left-side {
+    border: 7px solid #212340;
+    overflow: hidden;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    top: 100px;
+    z-index: 999;
+    background-image: url("IMG_8683.png");
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.left-side:hover {
+    opacity: 1;
+}
+
+.right-side {  
+    border: 7px solid #212340;
+    position: fixed;
+    left: 75%;
+    overflow: hidden;
+    width: 25%;
+    height: 100%;
+    margin: auto;
+    top: 100px;
+    z-index: 998;
+    background-image: url("bridge.jpg");
+    background-size: cover;
+    opacity: 0.8;
+
+}
+.right-side:hover {
+    opacity: 1;
+}
+
+
+.intro {
+    position: relative;
+    top: 120px;
+    width: 50%;
+    margin: auto;
+    clear: both;
+    z-index: 1000
+}
+
+.intro h1{
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.textBox{
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    padding: 20px;
+    width: 60%;
+    clear: both;
+    margin: auto;
+    max-width: 70%;
+}
+
+#textBox{
+    overflow-y: scroll;
+    resize: none;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+button{
+    cursor:pointer;
+    border: 3px groove #212340;
+    background-color: #212340;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 16px;
+}
+
+button:focus{
+    outline: none;
+    
+}
+
+.book-filter{
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: 150px;
+}
+
+#post-form{
+    position: relative;
+    width: 50%;
+    margin:auto;
+    top: 180px;
+}
+
+.about {
+    position: relative;
+    top: 100px;
+    width: 50%;
+    margin: auto;
+}
+
+#database {
+    position: relative;
+    width: 50%;
+    margin:auto;
+    top: 200px;
+}
+
+
+input[type=text]{
+    border: none;
+    background-color: #41467F;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: 'Droid Sans', sans-serif;
+    border-bottom: dashed 1.5px;
+}
+
+input[type=text]:focus{
+     outline: none;
+     border-bottom-color: cyan;
+}
+
+
+#book-send{
+    cursor:pointer;
+    border: 3px groove #212340;
+    background-color: #212340;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 14px; 
+}
+
+
+.remove, button.edit, button.noedit{
+   cursor:pointer;
+    border: 3px groove #212340;
+    background-color: #212340;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 14px;   
+}
+
+li .edit{
+    display: none;
+}
+
+li.edit .edit{
+    display: initial;
+}
+
+li.edit .noedit{
+    display: none;
+}
+
