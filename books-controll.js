@@ -201,7 +201,7 @@ function loadBooks() {
             title: $li.find('input.title').val(),
             author: $li.find('input.author').val(),
             genre: $li.find('input.genre').val(),
-            read: $li.find('input.read').attr('value')
+            read: $li.find('input.read').val()
         };
         
         $.ajax({
