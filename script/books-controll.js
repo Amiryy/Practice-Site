@@ -1,9 +1,7 @@
 function loadBooks() {
     $('#post-form').hide();
     
-
     //Creating getData function - With Promise
-    
     function getData(method, url) {
         return new Promise(function (resolve, reject) {
           var xhr = new XMLHttpRequest();
@@ -29,10 +27,7 @@ function loadBooks() {
         };
     
     //Search for Books
-    
     $('#search-books').on('click', function () {
-    
-
         getData('GET', 'http://localhost:8000/api/Books/').then(function(data){
             let Books = JSON.parse(data);
             let output = '';
@@ -57,19 +52,15 @@ function loadBooks() {
                   </li>
                 `; 
               }
-              
               document.getElementById('database').innerHTML = output;
               console.log('Library loaded.')
-                  
-            
         }).catch(function(err){
                 console.log(err);
             });
-        
         });
-    
+
+
     //Post a Book
-    
     $('#post-books').on('click', function(){   
         let formTemplate = `<div id="book-form">
                               <p>Title: <input 
@@ -151,8 +142,7 @@ function loadBooks() {
     
     //DELETE a Book
     
-    $('#database').delegate('.remove', 'click', function(){
-                
+    $('#database').delegate('.remove', 'click', function(){     
         let $li= $(this).closest('li');
         
        $.ajax({
@@ -180,14 +170,11 @@ function loadBooks() {
         $li.find('input.title').val($li.find('span.title').html());
         $li.find('input.author').val($li.find('span.author').html());
         $li.find('input.genre').val($li.find('span.genre').html());
-        
-        //!should make sure that read: Yes shows a checked box.
+        //Make sure that read: Yes shows a checked box.
         if($li.find('input.read').attr('value')=="true"){
             $li.find('input.read').prop('checked','true');
           };
-     
         $li.addClass('edit');
-        
         //Checkbox's value should return true/false
         $li.find('input.read').on('change', function() { 
           if ($(this).is(':checked')) {
@@ -198,14 +185,12 @@ function loadBooks() {
         });
         
     });
-    
     //'Cancel' button's function
     $('#database').delegate('.cancelEdit', 'click', function(){ 
         
         let $li= $(this).closest('li');
         $li.removeClass('edit');
     });
-    
     //'Save' button's function
     $('#database').delegate('.saveEdit', 'click', function(){ 
         let $li= $(this).closest('li');
@@ -215,16 +200,22 @@ function loadBooks() {
             genre: $li.find('input.genre').val(),
             read: $li.find('input.read').val()
         };
-        
+        let updateRead = function () {
+          if(bookUpdate.read === 'true'){
+            return "Yes"
+          } else {
+            return "No"
+          };
+        };
         $.ajax({
            type: 'PATCH',
             url: 'http://localhost:8000/api/Books/' + $li.attr('data-id'),
             data: bookUpdate,
-            success: function(newBook){
+            success: function(){
              $li.find('span.title').html(bookUpdate.title);
              $li.find('span.author').html(bookUpdate.author);
              $li.find('span.genre').html(bookUpdate.genre);
-             $li.find('span.read').html(bookUpdate.read?"Yes":"No");
+             $li.find('span.read').html(updateRead());
              $li.removeClass('edit');
              console.log('a Book has been updated.')
             },
@@ -235,6 +226,5 @@ function loadBooks() {
 
     });
     
-};
-    
+};   
 $(document).ready(loadBooks);

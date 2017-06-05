@@ -151,86 +151,10 @@ button:focus{
     
 }
 
-.book-filter{
-    width: 50%;
-    margin: auto;
-    position: relative;
-    top: 150px;
-}
-
-#post-form{
-    position: relative;
-    width: 50%;
-    margin:auto;
-    top: 180px;
-}
-
 .about {
     position: relative;
     top: 100px;
     width: 50%;
     margin: auto;
-}
-
-#database {
-    position: relative;
-    width: 50%;
-    margin:auto;
-    top: 200px;
-}
-
-
-input[type=text]{
-    border: none;
-    background-color: #41467F;
-    color: aliceblue;
-    font-size: 16px;
-    font-family: 'Droid Sans', sans-serif;
-    border-bottom: dashed 1.5px;
-}
-
-input[type=text]:focus{
-     outline: none;
-     border-bottom-color: cyan;
-}
-
-
-#book-send{
-    cursor:pointer;
-    border: 3px groove #212340;
-    background-color: #212340;
-    color: white;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 14px; 
-}
-
-
-.remove, button.edit, button.noedit{
-   cursor:pointer;
-    border: 3px groove #212340;
-    background-color: #212340;
-    color: white;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 14px;   
-}
-
-li .edit{
-    display: none;
-}
-
-li.edit .edit{
-    display: initial;
-}
-
-li.edit .noedit{
-    display: none;
 }
 

@@ -19,7 +19,6 @@
     top: 200px;
 }
 
-
 input[type=text]{
     border: none;
     background-color: #41467F;
@@ -34,7 +33,6 @@ input[type=text]:focus{
      border-bottom-color: cyan;
 }
 
-
 #book-send{
     cursor:pointer;
     border: 3px groove #212340;
@@ -47,7 +45,6 @@ input[type=text]:focus{
     font-family: 'Droid Sans', sans-serif;
     font-size: 14px; 
 }
-
 
 .remove, button.edit, button.noedit{
    cursor:pointer;
