@@ -72,17 +72,29 @@ function loadBooks() {
     
     $('#post-books').on('click', function(){   
         let formTemplate = `<div id="book-form">
-                            <p>Title: <input type="text" id="title" autocomplete="off"/>
-                            </p>
-                            <p>Author: <input type="text" id="author" autocomplete="off"/>
-                            </p>
-                            <p>Genre: <input type="text" id="genre" autocomplete="off"/>
-                            </p>
-                            <p>Read? <input type="checkbox" id="read" value="false"/>
-                            </p>
+                              <p>Title: <input 
+                                          type="text" 
+                                          id="title" 
+                                          autocomplete="off"/>
+                              </p>
+                              <p>Author: <input 
+                                            type="text" 
+                                            id="author" 
+                                            autocomplete="off"/>
+                              </p>
+                              <p>Genre: <input 
+                                          type="text" 
+                                          id="genre" 
+                                          autocomplete="off"/>
+                              </p>
+                              <p>Read? <input 
+                                          type="checkbox" 
+                                          id="read" 
+                                          value="false"/>
+                              </p>
                             </div>
-                        <button id="book-send">Send</button>
-                        <div id="post-message"></div>`
+                            <button id="book-send">Send</button>
+                            <div id="post-message"></div>`
         document.getElementById('post-form').innerHTML = formTemplate;
         //Book form's settings:
         $('#post-form').slideToggle();

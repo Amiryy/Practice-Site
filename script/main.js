@@ -1,24 +1,27 @@
 function main() {
-    $('body').hide();
-    $('body').fadeIn(1000);
+    $('#cover').fadeOut(650);
     $('#projects-list').hide();
-    
     $('#projects-button').on('click', function(){
-      $('#projects-list').slideToggle();
+        let projectsTemplate =  `
+                            <div class="projects-button"><a href="Timeline-project.html">Timeline</a></div>
+                            <div class="projects-button"><a href="Library-project.html">Library</a></div>
+                            `
+        document.getElementById('projects-list').innerHTML = projectsTemplate;
+        $('#projects-list').slideToggle();
     });
     
     $('a').mouseenter(function(){
         $(this).fadeTo('fast',0.7); 
     });
     
-     $('a').mouseleave(function(){
+    $('a').mouseleave(function(){
         $(this).fadeTo('fast',1)
     });
-     $('.navbutton').mouseenter(function(){
+    $('.navbutton').mouseenter(function(){
         $(this).fadeTo('fast',0.7); 
     });
     
-     $('.navbutton').mouseleave(function(){
+    $('.navbutton').mouseleave(function(){
         $(this).fadeTo('fast',1)
     });
     

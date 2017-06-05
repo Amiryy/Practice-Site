@@ -17,6 +17,15 @@ body {
     text-align: center;
 }
 
+#cover{
+    background-color: #17192E;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+}
+
+
 div.nav {
     padding: 20px 50px;
     border: 10px groove #212340;
@@ -40,12 +49,12 @@ div.nav {
 
 #projects-list{
     background-color: #212340;
-    padding: 10px 50px;
+    padding: 10px 40px;
     border: 10px groove #212340;
     display: block;
     position: fixed;
     top: 10%;
-    left:39%;
+    left:39.5%;
     font-family: 'Amatic SC', cursive;
     font-size: 18px;
     letter-spacing: 0.04em;
@@ -64,7 +73,7 @@ div.nav {
     margin: auto;
     top: 100px;
     z-index: 999;
-    background-image: url("IMG_8683.png");
+    background-image: url("../images/IMG_8683.png");
     background-size: cover;
     opacity: 0.8;
 }
@@ -83,7 +92,7 @@ div.nav {
     margin: auto;
     top: 100px;
     z-index: 998;
-    background-image: url("bridge.jpg");
+    background-image: url("../images/bridge.jpg");
     background-size: cover;
     opacity: 0.8;
 
