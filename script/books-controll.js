@@ -43,7 +43,8 @@ function loadBooks() {
                     <p>Genre: <span class="noedit genre">${book.genre}</span>
                     <input type="text" class="edit genre"/></p>
                     <p>Read: <span class="noedit read">${book.read?"Yes":"No"}</span>
-                    <input type="checkbox" class="edit read" value="${book.read?"true":"false"}">
+                    <input type="checkbox" class="edit read" 
+                           value="${book.read?"true":"false"}">
                     </p>
                     <button data-id='${book._id}' class='remove'>Delete</button>
                     <button class = "editBook noedit">Edit</button>
@@ -82,6 +83,7 @@ function loadBooks() {
                                           type="checkbox" 
                                           id="read" 
                                           value="false"/>
+                                        <label for="read"></label>
                               </p>
                             </div>
                             <button id="book-send">Send</button>
@@ -200,13 +202,6 @@ function loadBooks() {
             genre: $li.find('input.genre').val(),
             read: $li.find('input.read').val()
         };
-        let updateRead = function () {
-          if(bookUpdate.read === 'true'){
-            return "Yes"
-          } else {
-            return "No"
-          };
-        };
         $.ajax({
            type: 'PATCH',
             url: 'http://localhost:8000/api/Books/' + $li.attr('data-id'),
@@ -215,7 +210,7 @@ function loadBooks() {
              $li.find('span.title').html(bookUpdate.title);
              $li.find('span.author').html(bookUpdate.author);
              $li.find('span.genre').html(bookUpdate.genre);
-             $li.find('span.read').html(updateRead());
+             $li.find('span.read').html(bookUpdate.read === 'true' ? "Yes":"No");
              $li.removeClass('edit');
              console.log('a Book has been updated.')
             },
